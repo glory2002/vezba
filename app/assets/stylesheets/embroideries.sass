@@ -1,0 +1,101 @@
+// Place all the styles related to the Embroideries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets"
+@import "bootstrap"
+
+
+.wrap-div
+  background-color: white
+  border: 2px solid #ea3838
+  border-radius: 3px
+  margin-top: 30px
+  padding: 45px 0 48px 0
+
+
+#row-wrap
+  margin-left: -15px
+  margin-right: -15px
+
+.all
+  margin-top: 60px
+  padding-left: 0
+  padding-right: 0
+
+.region-div
+  img
+    width: 100%
+
+.text-region-div
+  padding-right: 0
+
+.text-box-region
+  padding: 0 40px 0 40px
+
+.region-name
+  text-align: left
+  font-family: 'Kankin'
+  color: #ea3838
+  font-size: 30px
+  margin-top: 38px
+
+.text-region
+  color: #ea3838
+  font: normal 16px/26px Open Sans
+  text-align: left
+
+.wrap-show-img
+  margin-bottom: 10%
+
+.ul-list
+  height: 400px
+  margin-top: 50px
+  background-color: white
+  padding-left: 0px
+  margin: 0% 0% 10% 0%
+  border: solid 2px red
+
+.div-show
+  overflow: hidden
+  position: relative
+  height: 280px
+  padding-left: 0px
+  padding-right: 0px
+  cursor: default
+
+.img-show
+  transform: scale(1)
+  transition: 0.3s
+  width: 250%
+  position: relative
+  left: -50%
+  top: -50%
+
+.title-embrodery
+  border: 2px solid #ea3838
+
+// BUTTONS VIEW and TITLE
+.wraped-show-img
+  .e-name
+    font-family: 'Kankin'
+    color: #ea3838
+    text-align: left
+    margin-left: 20px
+    margin-top: 15px
+    font-size: 25px
+    a
+      text-decoration: none
+      text-align: left
+      font-size: 17px
+      font-family: Open Sans
+      font-weight: bold
+      cursor: pointer
+      -webkit-transition-duration: 0.4s
+      transition-duration: 0.4s
+      color: black
+  &:hover
+    .e-name a
+      text-decoration: none
+      color: #00ce0a
+    .img-show
+      transform: scale(1.5)

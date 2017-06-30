@@ -1,0 +1,24 @@
+.bg-about.container
+  .row
+    .col-md-8.col-md-offset-2
+      .wraped-contact.contact-div
+        %h3.contact-title Контакти
+        %p
+          - flash.each do |key, value|
+            = content_tag :div, value, class: "flash #{key}"
+
+        = form_for @contact do |f|
+
+          = f.text_field :name, required: true, class:"input-label", placeholder: 'име'
+
+          = f.text_field :email, required: true, class:"input-label", placeholder: 'емейл'
+
+          = f.text_field :about, required: true, class:"input-label",  placeholder: 'относно'
+
+          = f.text_area :message, as: :text, required: true, class:"input-message",  placeholder: 'съобщение'
+
+          .hidden
+            = f.label :nickname
+            = f.text_field :nickname, hint: 'остави това поле празно'
+          %br
+          = f.submit 'изпрати', method: 'POST', action: 'create'

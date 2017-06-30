@@ -1,0 +1,58 @@
+// Place all the styles related to the contacts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+html
+  box-sizing: border-box
+
+*, *:before, *:after
+  box-sizing: inherit
+
+.contact-div
+  padding: 56px 120px 122px 120px
+
+input#contact_name,
+#contact_email,
+#contact_about.input-label,
+.input-message
+  width: calc(100%)
+  border: 1px solid #ea3838
+  border-radius: 1px
+  margin-bottom: 21px
+  font-size: 1.1em
+  color: black
+  padding: 12px
+  &:focus
+    box-shadow: inset 0 0 0 1px #00ce0a
+    border: 1px solid #00ce0a
+
+.input-message
+  height: 150px
+
+::-webkit-input-placeholder
+  color: #ea3838
+  text-transform: uppercase
+  font-size: 14px
+  letter-spacing: 2px
+  font-family: Open Sans, Helvetica, Arial, sans-serif
+
+form input[type=submit], form button
+  font-family: Open Sans, Helvetica, Arial, sans-serif
+  background-color: #00ce0a
+  box-shadow: none
+  text-shadow: none
+  background-image: none
+  color: white
+  padding: 21px 77% 20px 25px
+  border: none
+  border-radius: 2px
+  cursor: pointer
+  font-size: 20px
+
+form input[type=submit]:not(.disabled):hover
+  background-color: #2c9b00
+  background-image: none
+  text-shadow: none
+
+.contact-send
+  padding: 54px 88px
+  text-align: center

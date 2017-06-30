@@ -1,0 +1,24 @@
+.container
+  .row
+    .row.wrap-div
+      .col-md-5.region-div= image_tag @region.image
+      .col-md-7.text-region-div
+        .row
+          .col-md-12.text-box-region
+            %h2.region-name= @region.name
+            .text-region= @region.description
+            %br
+            %br
+
+    #row-wrap.row
+      .all.col-md-12
+        .row.clearfix
+          - @embroideries.each do |embroidery|
+            .col-md-4.wraped-show-img
+              .row.ul-list
+                .div-show= link_to (image_tag embroidery.image, class: "img-show" ), region_embroidery_path(embroidery.region_id, embroidery)
+                .title-embroidery
+                  %p.e-name= embroidery.name
+                  %p.e-name= link_to "View", region_embroidery_path(embroidery.region_id, embroidery), class: "button-view btn1"
+
+    = paginate @embroideries, :left => 1, :right => 3

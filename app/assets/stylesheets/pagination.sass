@@ -1,0 +1,42 @@
+.pagination
+  float: none
+  margin: 40px 0 70px 0
+  color: #7b8996
+  .page a
+    background: white
+    font-family: Open Sans
+    font-size: 20px
+    color: #777777
+    cursor: pointer
+    transition: all 0.2s
+    padding: 10px
+
+.pagination a,
+.pagination span.page.current
+  border-radius: 2px
+  font-family: Open Sans
+  font-size: 20px
+  font-weight: 600
+  transition: all 0.2s
+  background: white
+  color: #00ce0a
+  cursor: pointer
+  text-decoration: none
+  padding: 10px
+  text-shadow: none
+  box-shadow: none
+  border: 0
+
+.pagination span.page.current:not(.disabled):hover,
+.pagination a:not(.disabled):hover
+  background-image: linear-gradient(180deg, #ffffff, #ffffff)
+  box-shadow: none
+  background-color: white
+  color: red
+.pagination span.page.current:not(.disabled):active
+  background-image: linear-gradient(180deg, #ffffff, #ffffff)
+  box-shadow: none
+  background-color: white
+
+nav.pagination span.page.current
+  padding: 10px

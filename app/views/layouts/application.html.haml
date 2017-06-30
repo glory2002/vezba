@@ -1,0 +1,35 @@
+!!!5
+%html
+  %head
+    %title AppVezba
+
+    = stylesheet_link_tag  'active_admin',  'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = csrf_meta_tags
+
+  %body
+    %div{ class: '= @home_class if @home_class.present?'}
+    .wraper
+      .navbar.navbar-default
+        .row.container-fluidgit
+          .col-md-3.navbar-header
+            = link_to root_path do
+              = image_tag "Logo.png", class: "brand navbar-left"
+
+          .col-md-9
+            %ul.navbar-right
+              %li= link_to "Начало", root_path, class: "menu-btn"
+              %li= link_to "Идея", welcome_about_path, class: "menu-btn #{current_page?(welcome_about_path) ? "current" : nil }"
+              %li= link_to "Шевици", regions_path, class: "menu-btn #{current_page?(regions_path) ? "current" : nil }"
+              -# %li= link_to "Блог", '#'
+              %li= link_to "Контакти", new_contact_path, class: "menu-btn #{current_page?(new_contact_path) ? "current" : nil }"
+      .content
+        = yield
+
+        .footer.container-fluid
+
+          %span © Copyright 2017 Vezba
+          %p.social-btn.fb-en= link_to 'f', "https://www.facebook.com/groups/vezba/"
+          -# %span Created By
+          -# %span= link_to 'Gloria Angelova', "http://gloryangelova.com"
+          -# %p.social-btn.fb-en= link_to 'f', "https://www.facebook.com/groups/vezba/"

@@ -1,0 +1,9 @@
+.container
+  .row.wrapper
+    .col-md-6.name-single-show.navbar-left= @embroideries.name
+    .col-md-6.navbar-right
+      .col-md-6.download-btn.btn4= link_to 'Свали', download_region_path(@embroideries)
+      .col-md-6.back-btn.btn4= link_to 'Назад', :back
+    .row
+      .col-md-12.wrap-show-img
+        = image_tag @embroideries.image, class: "img-single-show"

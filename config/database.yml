@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: app-vezba_development2
+  username: gloria
+  password: '123456'
+
+
+test:
+  <<: *default
+  database: app-vezba_test2
+  username: gloria
+  password: '123456'
+
+production:
+  <<: *default
+  database: db/production.sqlite3
+  username: vezba
+  password: vezba_123
+  adapter: postgresql

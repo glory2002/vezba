@@ -1,0 +1,21 @@
+-# = form_for(:region, url: {action: 'update', id: @region.id}) do |f|
+%h1 Editing Region
+
+= form_for :region, url: region_path(@region), method: :patch do |f|
+
+  .field
+    = f.label :name
+    = f.text_field :name
+
+  .field
+    = f.label :image
+    = f.text_field :image
+
+  .field
+    = f.label :description
+    = f.text_area :description, rows: 10, cols: 60
+
+  .actions
+    = f.submit('Update Region')
+
+= link_to 'Back', regions_path

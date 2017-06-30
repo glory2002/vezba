@@ -1,0 +1,13 @@
+%h1 Add a new Embroidery
+= form_for [@region, @region.embroideries.build] do |f|
+
+  .field
+    = f.label :name
+    = f.text_field :name
+
+  .field
+    = f.label :image
+    = f.text_field :image
+
+  .actions
+    = submit_tag('Add Embroidery')

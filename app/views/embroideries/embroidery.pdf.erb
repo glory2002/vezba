@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <%= wicked_pdf_stylesheet_link_tag 'pdf' %>
+  </head>
+  <body>
+    <h1 class = "embroidery-name-pdf"><%= @embroideries.name %></h1>
+
+    <%= wicked_pdf_image_tag @embroideries.image, class: "img-embroidery-pdf" %>
+
+  </body>
+</html>

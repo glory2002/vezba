@@ -1,0 +1,10 @@
+.container.region-container
+  .row.wrap-div-region
+    - @regions.each do |region|
+      .col-md-4.div-region
+        .hovereffect
+          = link_to (image_tag region.image,  class:"img-region"), region
+          = link_to region do
+            .overlay
+              .region-title
+                = region.name
